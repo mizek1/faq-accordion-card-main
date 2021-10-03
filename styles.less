@@ -25,11 +25,12 @@ details {
 }
 
 .body-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   background: linear-gradient(var(--soft-violet), var(--soft-blue));
-  overflow-x: auto;
+  overflow: auto;
+  padding-top: 5rem;
 }
 
 .card {
@@ -112,16 +113,20 @@ details {
 }
 
 @media (min-width: 900px) {
+  .body-wrapper {
+    padding-top: 0;
+  }
+
   .card {
     width: 750px;
     background-image: url(images/bg-pattern-desktop.svg);
-    background-position: -90vh -45vh;
+    background-position: -38rem -18rem;
   
     &__image {
       background-image: url(images/illustration-box-desktop.svg), url(images/illustration-woman-online-desktop.svg);
       background-size: auto, auto;
-      background-repeat: no-repeat no-repeat;
-      background-position: -2vh 20vh, 0vh 0vh;
+      background-repeat: no-repeat, no-repeat;
+      background-position: -1rem 9rem, 0rem 1rem;
       transform: translateX(-20%);
       position: relative;
     }
